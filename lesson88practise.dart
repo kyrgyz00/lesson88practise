@@ -24,7 +24,7 @@ void main() {
   // print(task_333(3, 4));
   // task_44('6', 4);
   // task_55(7);
-  task_66("456659");
+  // task_66("456659");
 }
 
 void task1_1_print() {
@@ -214,14 +214,14 @@ task_ShowList(List lol) {
 
 task_333(int a, int b) {
   //////
-  int c = (a * a) + (b * b);
+  int c = a * a + b * b;
 
-  return (sqrt(c));
+  return sqrt(c);
 }
 
-task_44(String width, int height) {
+task_44(String char, int height) {
   for (int g = 0; g < height; g++) {
-    print(width * height);
+    print(char * height);
   }
 }
 
@@ -235,16 +235,19 @@ task_55(int height) {
 }
 
 void task_66(String a) {
-  
-  List<dynamic> ar = a.split('');
+  List<int> ar = a.split('').map(int.parse).toList();
   print(ar);
-  int c = int.parse(ar[0]) + int.parse(ar[1]) + int.parse(ar[2]);
-  int b = int.parse(ar[3]) + int.parse(ar[4]) + int.parse(ar[5]);
-  print(c);
-  print(b);
-  if (c == b) {
+  
+  if (ar[0] + ar[1] + ar[2] == ar[3] + ar[4] + ar[5]) {
     print('yes');
   } else {
     print('no');
   }
+
+  // int c = int.parse(ar[0]) + int.parse(ar[1]) + int.parse(ar[2]);
+  // int b = int.parse(ar[3]) + int.parse(ar[4]) + int.parse(ar[5]);
+  // print(c);
+  // print(b);
+
+  // if (c == b)
 }
