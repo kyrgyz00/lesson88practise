@@ -25,6 +25,8 @@ void main() {
   // task_44('6', 4);
   // task_55(7);
   // task_66("456659");
+  // task_7("13345");
+  task_8("abdfh");
 }
 
 void task1_1_print() {
@@ -225,19 +227,24 @@ task_44(String char, int height) {
   }
 }
 
-task_55(int height) {
-  for (int n = 1; n <= height; n++) {
+void task_55(int height) {
+  String sym = "*";
+  String space = " ";
+  for (int n = 0; n <= height * 2; n++) {
     if (n.isOdd) {
-      print("*" * n);
+      space = " " * ((height * 2 - (n - 1)) / 2).toInt();
+      sym = "*" * n;
+      // print("*" * n);
+      print('$space$sym');
     }
-    n++;
+    // for(){}
   }
 }
 
 void task_66(String a) {
   List<int> ar = a.split('').map(int.parse).toList();
   print(ar);
-  
+
   if (ar[0] + ar[1] + ar[2] == ar[3] + ar[4] + ar[5]) {
     print('yes');
   } else {
@@ -250,4 +257,25 @@ void task_66(String a) {
   // print(b);
 
   // if (c == b)
+}
+
+task_7(String num) {
+  List<int> arr = num.split('').map(int.parse).toList();
+  print(arr);
+  if (arr[0] == 1 && arr[1] == 2 && arr[2] == 3) {
+    print("yes");
+  } else {
+    print("no");
+  }
+}
+
+task_8( String sym ) {
+
+  List arr = sym.split("").toList();
+  print(arr);
+  if (arr[0] == "a") {
+    print("yes");
+  } else {
+    print("no");
+  }
 }
